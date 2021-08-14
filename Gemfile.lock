@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    joker (0.1.0)
+    joker (1.0.0)
       thor
 
 GEM

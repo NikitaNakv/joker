@@ -3,7 +3,7 @@
 require_relative "lib/joker/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "joker"
+  spec.name          = "jokerino"
   spec.version       = Joker::VERSION
   spec.authors       = ["NikitaNakv"]
   spec.email         = ["nak-nikita@yandex.ru"]

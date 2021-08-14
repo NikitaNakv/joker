@@ -16,7 +16,7 @@ module Joker
         f.response :json # decode response bodies as JSON
       end
       
-      response = conn.get('https://v2.jokeapi.dev/joke/Any', {type: 'single', blacklistFlags: 'nsfw,racist,sexist,explicit'})
+      response = conn.get('https://v2.jokeapi.dev/joke/Programming', {type: 'single', blacklistFlags: 'nsfw,racist,sexist,explicit'})
 
       response.body["joke"]
     end

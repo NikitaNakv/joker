@@ -7,16 +7,17 @@ require_relative "joker/version"
 module Joker
 
   class Error < StandardError; end
-  # Your code goes here...
 
   class Teller
 
-    def self.tell
+    def self.tell(category="Programming")
       conn = Faraday.new do |f|
         f.response :json # decode response bodies as JSON
       end
       
-      response = conn.get('https://v2.jokeapi.dev/joke/Programming', {type: 'single', blacklistFlags: 'nsfw,racist,sexist,explicit'})
+      url = "https://v2.jokeapi.dev/joke/#{category}"
+
+      response = conn.get(url, {type: 'single', blacklistFlags: 'nsfw,racist,sexist,explicit'})
 
       response.body["joke"]
     end

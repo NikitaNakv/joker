@@ -5,10 +5,14 @@ require 'joker'
 module Joker
   class CLI < Thor
     
-    desc "tell (JOKE)", "tells something really dumb"
+    desc "tell -c (CATEGORY)", "tells something really dumb, availible categories: Any, Programming, Misc, Dark, Pun, Spooky, Christmas"
+    method_option :category, aliases: "-c"
     def tell
-      puts Joker::Teller.tell
-    end  
+      puts Joker::Teller.tell(options[:category])
+    end
+    
+    # TODO make default category
+    # TODO exception handling
 
   end
 end

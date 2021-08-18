@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-#require 'joker'
+
+# require 'joker'
 
 RSpec.describe Joker do
   it "has a version number" do

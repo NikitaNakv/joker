@@ -11,6 +11,6 @@ gem "rspec", "~> 3.0"
 
 gem "rubocop", "~> 1.7"
 
-gem 'faraday'
+gem "faraday"
 
-gem 'faraday_middleware'
+gem "faraday_middleware"
